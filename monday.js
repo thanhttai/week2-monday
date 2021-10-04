@@ -198,18 +198,7 @@ function seriesOfNumber(a, b) {
 }
 seriesOfNumber(8, 5);
 //Problem 6 : ROCKET
-var array = [
-    [1, 2],
-    [3, 4],
-    [5, 6]
-];
 
-
-for (var i = 0; i < array.length; i++) {
-    for (var j = 0; j < array[i].length; j++) {
-        console.log(array[i][j])
-    }
-}
 // Problem 7: ROCKET
 function getLeapYears(start, end) {
     for (var i = start; i <= end; i++) {
