@@ -147,6 +147,7 @@ function checkBoard() {
     }
 
 }
+checkBoard()
 
 //9. Iterate over Arrays
 var workingHours = [6, 6, 7, 7, 8, 8, 6, 7, 8, 7];
@@ -180,27 +181,16 @@ function totalIncome(start, end) {
 totalIncome(6, 8)
 //
 
-// function getRandom(start, end) {
-//     min = Math.ceil(start);
-//     end = Math.floor(end);
-//     var weeks = Math.floor(Math.random() * (end - start + 1)) + start;
+const sumOfMoney = (numOfWeek) => {
+    const max = 8;
+    const min = 6;
+    let result = [];
+    for (let i = 0; i < numOfWeek * 5; i++) {
+        let numOfHourPerDay = Math.floor(Math.random() * (max - min + 1) + min);
+        result.push(numOfHourPerDay);
+    }
 
-//     function totalIncome(c, b) {
-//         for (var i = 0; i < 250; i++) {
-//             var a = Math.floor(Math.random() * (b - c + 1) + c);
-//             if (c < a < b) {
-//                 result.push(a)
-//                 if (result.length === 250) {
-//                     for (var i = 0; i < result.length; i++) {
-//                         a = a + result[i]
-//                     }
-//                 }
-//             }
-//         }
-//         console.log(a * 25)
-//     }
-//     totalIncome(6, 8)
+    console.log(result);
+}
 
-// }
-
-
+sumOfMoney(50);
