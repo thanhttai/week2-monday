@@ -81,8 +81,8 @@ function number() {
 // Instruction: C1
 function C1() {
     var a = 1;
-    var b = 44;
-    var c = 55;
+    var b = 55;
+    var c = 44;
     if (a < b || a < c) {
         console.log('a nhỏ nhất');
         if (b < c) {
@@ -97,10 +97,17 @@ function C1() {
         } else {
             console.log('a lớn nhất');
         }
-    } else {
+    } else if (c < a || c < b) {
         console.log('c nhỏ nhất');
-    };
+        if (a < b) {
+            console.log('b lớn nhất');
+        } else {
+            console.log('a lớn nhất');
+        }
+    }
+
 };
+C1()
 // C2
 function C2() {
     var a = 1;
@@ -198,7 +205,18 @@ function seriesOfNumber(a, b) {
 }
 seriesOfNumber(8, 5);
 //Problem 6 : ROCKET
+var array = [
+    [1, 2],
+    [3, 4],
+    [5, 6]
+];
 
+
+for (var i = 0; i < array.length; i++) {
+    for (var j = 0; j < array[i].length; j++) {
+        console.log(array[i][j])
+    }
+}
 // Problem 7: ROCKET
 function getLeapYears(start, end) {
     for (var i = start; i <= end; i++) {
@@ -228,3 +246,4 @@ function play() {
         console.log("No");
     }
 }
+play()
